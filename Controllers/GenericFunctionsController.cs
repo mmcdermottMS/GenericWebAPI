@@ -21,5 +21,14 @@ namespace GenericWebAPI.Controllers
 
             return $"Function A Called at {DateTime.UtcNow} UTC";
         }
+
+        [Route("FunctionB")]
+        [HttpGet]
+        public string GetFunctionB()
+        {
+            _logger.LogInformation("Function B Called");
+
+            return $"Function B Called at {DateTime.UtcNow} UTC";
+        }
     }
 }
